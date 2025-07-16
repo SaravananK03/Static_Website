@@ -19,6 +19,30 @@
   <div class="container">
     <h1>Car Rental Reservation..!</h1>
 
+    <form id="reservationForm">
+      <label for="pickupLocation">Pickup Location:</label>
+      <input type="text" id="pickupLocation" required />
+
+      <label for="dropoffLocation">Drop-off Location:</label>
+      <input type="text" id="dropoffLocation" required />
+
+      <label for="pickupDate">Pickup Date:</label>
+      <input type="date" id="pickupDate" required />
+
+      <label for="dropoffDate">Drop-off Date:</label>
+      <input type="date" id="dropoffDate" required />
+
+      <label for="carType">Car Type:</label>
+      <select id="carType">
+        <option value="Economy">Economy</option>
+        <option value="SUV">SUV</option>
+        <option value="Luxury">Luxury</option>
+        <option value="Van">Van</option>
+      </select>
+
+      <button type="submit">Reserve Now</button>
+    </form>
+
   </div>
 </body>
 </html>
