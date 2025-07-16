@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservation Summary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">QuickRent</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Booking Confirmation</h2>
+    <div id="reservationSummary"></div>
+  </div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("reservationData"));
+    const summary = document.getElementById("reservationSummary");
+
+    if (data) {
+      summary.innerHTML = `
+        <p><strong>Pickup Location:</strong> ${data.pickupLocation}</p>
+        <p><strong>Pickup Date & Time:</strong> ${data.pickupDate} ${data.pickupTime}</p>
+        <p><strong>Drop-off Date & Time:</strong> ${data.dropoffDate} ${data.dropoffTime}</p>
+        <h3>Selected Car:</h3>
+        <img src="${data.selectedCar.image}" style="max-width:300px;" />
+        <p><strong>Model:</strong> ${data.selectedCar.name}</p>
+        <p><strong>Price:</strong> ₹${data.selectedCar.price}</p>
+      `;
+    } else {
+      summary.innerHTML = "<p>No reservation found.</p>";
+    }
+  </script>
+</body>
+</html>
