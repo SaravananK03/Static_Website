@@ -12,3 +12,86 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+nav .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f9d423;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #f9d423;
+}
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #ffffffdd;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+h1 {
+  text-align: center;
+  color: #d72638;
+}
+label {
+  display: block;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+}
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #fefefe;
+  transition: border-color 0.3s ease;
+}
+input:focus,
+select:focus {
+  border-color: #ff6f61;
+  outline: none;
+}
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(to right, #5b86e5, #36d1dc);
+}
+.reservation-summary {
+  margin-top: 30px;
+  background: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #00acc1;
+}
+.reservation-summary h3 {
+  margin-top: 0;
+  color: #007c91;
+}
