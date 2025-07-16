@@ -1,8 +1,7 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f9d423, #ff4e50);
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
 }
 nav {
   background: #333;
@@ -13,8 +12,8 @@ nav {
   align-items: center;
 }
 nav .logo {
-  font-size: 20px;
   font-weight: bold;
+  font-size: 20px;
   color: #f9d423;
 }
 nav ul {
@@ -30,68 +29,83 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
-nav ul li a:hover {
-  color: #f9d423;
+.hero {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  padding: 100px 20px;
+}
+.booking-box {
+  background: white;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.form-row select,
+.form-row input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 160px;
+  flex: 1;
+}
+.view-btn {
+  background: #ffce00;
+  padding: 12px 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.view-btn:hover {
+  background: #e0b900;
+}
+.link,
+.edit-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0056cc;
 }
 .container {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 50px auto;
-  background: #ffffffdd;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
 }
-h1 {
+.car-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.car-card {
+  background: #fff;
+  padding: 15px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
-  color: #d72638;
 }
-label {
-  display: block;
-  margin-top: 15px;
-  color: #333;
-  font-weight: bold;
-}
-input,
-select {
+.car-card img {
   width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border: 2px solid #ccc;
+  height: 150px;
+  object-fit: cover;
   border-radius: 6px;
-  background-color: #fefefe;
-  transition: border-color 0.3s ease;
 }
-input:focus,
-select:focus {
-  border-color: #ff6f61;
-  outline: none;
-}
-button {
-  margin-top: 25px;
-  width: 100%;
-  padding: 12px;
+.car-card button {
+  margin-top: 10px;
   background: linear-gradient(to right, #36d1dc, #5b86e5);
   border: none;
   color: white;
-  font-size: 18px;
   font-weight: bold;
-  cursor: pointer;
+  padding: 10px 20px;
   border-radius: 6px;
-  transition: background 0.3s ease;
-}
-button:hover {
-  background: linear-gradient(to right, #5b86e5, #36d1dc);
-}
-.reservation-summary {
-  margin-top: 30px;
-  background: #e0f7fa;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 5px solid #00acc1;
-}
-.reservation-summary h3 {
-  margin-top: 0;
-  color: #007c91;
+  cursor: pointer;
 }

@@ -16,33 +16,28 @@
     </ul>
   </nav>
 
-  <div class="container">
-    <h1>Car Rental Reservation</h1>
-    <form id="reservationForm">
-      <label for="pickupLocation">Pickup Location:</label>
-      <input type="text" id="pickupLocation" required />
-
-      <label for="dropoffLocation">Drop-off Location:</label>
-      <input type="text" id="dropoffLocation" required />
-
-      <label for="pickupDate">Pickup Date:</label>
-      <input type="date" id="pickupDate" required />
-
-      <label for="dropoffDate">Drop-off Date:</label>
-      <input type="date" id="dropoffDate" required />
-
-      <label for="carType">Car Type:</label>
-      <select id="carType">
-        <option value="Economy">Economy</option>
-        <option value="SUV">SUV</option>
-        <option value="Luxury">Luxury</option>
-        <option value="Van">Van</option>
-      </select>
-
-      <button type="submit">Reserve Now</button>
-    </form>
-
-    <div class="reservation-summary" id="summary"></div>
+  <div class="hero">
+    <div class="booking-box">
+      <div class="form-row">
+        <select>
+          <option>Same Drop-off Location</option>
+          <option>Different Drop-off Location</option>
+        </select>
+        <a href="#" class="link">Add a Discount Code</a>
+      </div>
+      <div class="form-row wide">
+        <input type="text" placeholder="Pick-up Location" id="pickupLocation" required />
+        <input type="date" id="pickupDate" required />
+        <input type="time" id="pickupTime" required />
+        <input type="date" id="dropoffDate" required />
+        <input type="time" id="dropoffTime" required />
+        <button class="view-btn" onclick="saveFormAndGo()">View Vehicles</button>
+      </div>
+      <div class="form-row info">
+        <span><strong>Driver Age: 25+</strong> <span class="info-icon">ℹ</span></span>
+        <a href="#" class="edit-link">View / Edit / Cancel</a>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
