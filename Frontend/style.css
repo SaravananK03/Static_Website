@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  background: linear-gradient(to right, #f9d423, #ff4e50);
 }
 nav {
   background: #333;
@@ -32,7 +32,7 @@ nav ul li a {
 }
 .hero {
   background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-  padding: 100px 20px;
+  padding: 287px 20px;
 }
 .booking-box {
   background: white;
