@@ -25,14 +25,16 @@
     const data = JSON.parse(localStorage.getItem("reservationData"));
     const summary = document.getElementById("reservationSummary");
 
-    if (data) {
+    if (data && data.selectedCar) {
       summary.innerHTML = `
         <div class="summary-left">
           <p><strong>Pickup Location:</strong> ${data.pickupLocation}</p>
           <p><strong>Pickup Date & Time:</strong> ${data.pickupDate} ${data.pickupTime}</p>
           <p><strong>Drop-off Date & Time:</strong> ${data.dropoffDate} ${data.dropoffTime}</p>
           <p><strong>Model:</strong> ${data.selectedCar.name}</p>
-          <p><strong>Price:</strong> ₹${data.selectedCar.price}</p>
+          <p><strong>Price per Day:</strong> ₹${data.selectedCar.price}</p>
+          <p><strong>Rental Duration:</strong> ${data.selectedCar.rentalDays} day(s)</p>
+          <p><strong>Total Price:</strong> ₹${data.selectedCar.totalPrice}</p>
         </div>
         <div class="summary-right">
           <img src="${data.selectedCar.image}" alt="Car Image" />
@@ -42,6 +44,7 @@
       summary.innerHTML = "<p>No reservation found.</p>";
     }
   </script>
+
   <script src="script.js"></script>
 </body>
 </html>
