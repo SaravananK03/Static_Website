@@ -6,16 +6,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <div class="logo">QuickRent</div>
-    <ul>
+  <nav class="navbar">
+    <div class="logo">Car Rental</div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
+      <li><a href="details.html">Booking</a></li>
+      <li><a href="confirmation.html">Confirm</a></li>
     </ul>
   </nav>
 
   <div class="container">
     <h2>Booking Confirmation</h2>
-    <div id="reservationSummary"></div>
+    <div id="reservationSummary" class="reservation-summary"></div>
   </div>
 
   <script>
@@ -24,17 +27,21 @@
 
     if (data) {
       summary.innerHTML = `
-        <p><strong>Pickup Location:</strong> ${data.pickupLocation}</p>
-        <p><strong>Pickup Date & Time:</strong> ${data.pickupDate} ${data.pickupTime}</p>
-        <p><strong>Drop-off Date & Time:</strong> ${data.dropoffDate} ${data.dropoffTime}</p>
-        <h3>Selected Car:</h3>
-        <img src="${data.selectedCar.image}" style="max-width:300px;" />
-        <p><strong>Model:</strong> ${data.selectedCar.name}</p>
-        <p><strong>Price:</strong> ₹${data.selectedCar.price}</p>
+        <div class="summary-left">
+          <p><strong>Pickup Location:</strong> ${data.pickupLocation}</p>
+          <p><strong>Pickup Date & Time:</strong> ${data.pickupDate} ${data.pickupTime}</p>
+          <p><strong>Drop-off Date & Time:</strong> ${data.dropoffDate} ${data.dropoffTime}</p>
+          <p><strong>Model:</strong> ${data.selectedCar.name}</p>
+          <p><strong>Price:</strong> ₹${data.selectedCar.price}</p>
+        </div>
+        <div class="summary-right">
+          <img src="${data.selectedCar.image}" alt="Car Image" />
+        </div>
       `;
     } else {
       summary.innerHTML = "<p>No reservation found.</p>";
     }
   </script>
+  <script src="script.js"></script>
 </body>
 </html>

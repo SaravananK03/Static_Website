@@ -68,3 +68,13 @@ if (window.location.pathname.includes("details.html")) {
     };
   };
 }
+
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("active");
+});
+
+
+
+
+

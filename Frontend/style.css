@@ -1,40 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #f9d423, #ff4e50);
 }
-nav {
-  background: #333;
-  color: white;
-  padding: 15px 30px;
+
+/* NAVBAR */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #222;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
 }
-nav .logo {
-  font-weight: bold;
-  font-size: 20px;
-  color: #f9d423;
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
 }
-nav ul {
-  list-style: none;
+
+.menu-toggle {
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links {
   display: flex;
-  margin: 0;
-  padding: 0;
+  gap: 2rem;
+  list-style: none;
 }
-nav ul li {
-  margin-left: 20px;
-}
-nav ul li a {
+
+.nav-links li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 .hero {
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-  padding: 287px 20px;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
 }
+
 .booking-box {
+  width: 90%;
   background: white;
   padding: 20px;
   max-width: 1200px;
@@ -42,6 +66,7 @@ nav ul li a {
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+
 .form-row {
   display: flex;
   gap: 10px;
@@ -49,6 +74,7 @@ nav ul li a {
   margin-bottom: 15px;
   align-items: center;
 }
+
 .form-row select,
 .form-row input {
   padding: 12px;
@@ -57,6 +83,7 @@ nav ul li a {
   min-width: 160px;
   flex: 1;
 }
+
 .view-btn {
   background: #ffce00;
   padding: 12px 18px;
@@ -65,26 +92,31 @@ nav ul li a {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .view-btn:hover {
   background: #e0b900;
 }
+
 .link,
 .edit-link {
   text-decoration: none;
   font-weight: bold;
   color: #0056cc;
 }
+
 .container {
   max-width: 1200px;
   margin: 50px auto;
   padding: 20px;
 }
+
 .car-selection {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
+
 .car-card {
   background: #fff;
   padding: 15px;
@@ -93,12 +125,14 @@ nav ul li a {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
 }
+
 .car-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 6px;
 }
+
 .car-card button {
   margin-top: 10px;
   background: linear-gradient(to right, #36d1dc, #5b86e5);
@@ -109,3 +143,225 @@ nav ul li a {
   border-radius: 6px;
   cursor: pointer;
 }
+
+.white-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Confirmation Section Wrapper */
+.reservation-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: #ffffff; 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+/* Left Side: Details */
+.summary-left {
+  flex: 1;
+  min-width: 250px;
+  color: #333;
+}
+
+/* Right Side: Image */
+.summary-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Make Car Title (Model) Bold and Big */
+.summary-left p strong {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.summary-left p:nth-of-type(4) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* Center the form summary */
+#formSummary {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive media queries */
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .car-card {
+    width: 220px;
+  }
+   body {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .car-card h4 {
+    font-size: 16px;
+  }
+  .view-btn {
+    width: 100%;
+  }
+}
+
+/* MOBILE MENU FOR SMALL DEVICES */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Font scaling for responsiveness */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+/* Responsive behavior for tablets */
+
+@media (min-width: 768px) {
+  .booking-box {
+    max-width: 900px;
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  .form-row.wide {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .form-row.wide input,
+  .form-row.wide select,
+  .form-row.wide button {
+    flex: 1 1 calc(33.33% - 10px);
+    min-width: 180px;
+  }
+
+  .form-row {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 320px) {
+  .booking-box {
+    max-width: 900px;
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  .form-row.wide {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .form-row.wide input,
+  .form-row.wide select,
+  .form-row.wide button {
+    flex: 1 1 calc(33.33% - 10px);
+    min-width: 180px;
+  }
+
+  .form-row {
+    margin-bottom: 15px;
+  }
+}
+
