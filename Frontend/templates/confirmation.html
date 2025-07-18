@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Reservation Summary</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Confirmation</title>
+  <link rel="stylesheet" href="../static/style.css" />
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">Car Rental</div>
     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="details.html">Booking</a></li>
-      <li><a href="confirmation.html">Confirm</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./details.html">Booking</a></li>
+      <li><a href="./confirmation.html">Confirm</a></li>
     </ul>
   </nav>
 
   <div class="container">
     <h2>Booking Confirmation</h2>
     <div id="reservationSummary" class="reservation-summary"></div>
+
+    <div class="billing-form">
+            <input type="text" id="customer-name" placeholder="Enter your name" required />
+            <span class="error-message" id="name-error"></span>
+
+            <input type="email" id="customer-email" placeholder="Enter your email" required />
+            <span class="error-message" id="email-error"></span>
+
+            <input type="tel" id="customer-number" placeholder="Enter your 10-digit phone number" required />
+            <span class="error-message" id="number-error"></span>
+
+            <div class="button-group">
+              <button id="payButton">Pay Now</button>
+              <button id="cancelButton" type="button">Cancel</button>
+            </div>
+
+          </div>
   </div>
 
   <script>
@@ -45,6 +63,7 @@
     }
   </script>
 
-  <script src="script.js"></script>
+  <script src="../static/script.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </body>
 </html>

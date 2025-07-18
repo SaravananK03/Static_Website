@@ -245,6 +245,240 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+input.input-error {
+  border: 1px solid red;
+  background-color: #ffe6e6;
+}
+
+/* confirmation page style*/
+
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://w0.peakpx.com/wallpaper/135/1018/HD-wallpaper-car-sports-car-neon-backlight-asphalt.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      text-align: center;
+      color: #fdd835;
+    }
+
+    .reservation-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .summary-left, .summary-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .summary-right img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .summary-left p {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .billing-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .billing-form input {
+      background: #edebeb;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      font-size: 1em;
+    }
+
+    .billing-form input.input-error {
+      border: 2px solid #f44336; /* Red for invalid */
+      background-color: #fff5f5;
+    }
+
+    .billing-form input.input-valid {
+      border: 2px solid #4CAF50; /* Green for valid */
+      background-color: #f3fff3;
+    }
+
+    .input-error {
+      border: 2px solid #f44336;
+      background-color: #fff5f5;
+    }
+
+    .input-valid {
+      border: 2px solid #4CAF50;
+      background-color: #f3fff3;
+    }
+
+
+
+    .error-message {
+      color: #ff5252;
+      font-size: 0.9em;
+      display: none;
+      margin-bottom: 5px;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button-group button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    #payButton {
+      margin-top: 15px;
+      padding: 12px;
+      font-size: 1.1em;
+      background-color: #fdd835;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    #payButton:hover {
+      background-color: #55c708;
+      transform: scale(1.03);
+    }
+    #cancelButton {
+      margin-top: 15px;
+      padding: 12px;
+      font-size: 1.1em;
+      background-color: #ff5252;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    #cancelButton:hover {
+      background-color: #d32f2f;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .reservation-summary {
+        flex-direction: column;
+      }
+    }
+
+@media (width: 320px) {
+  .container {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .reservation-summary {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .summary-left, .summary-right {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .summary-right img {
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .billing-form input {
+    font-size: 0.95em;
+    padding: 10px;
+  }
+
+  .error-message {
+    font-size: 0.8em;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-group button {
+    font-size: 0.95em;
+    padding: 10px;
+    min-width: 100%;
+  }
+}
+
+
+
+/* Media Query for Tablets and Mobile */
+@media (max-width: 768px) {
+  .reservation-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summary-left, .summary-right {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .billing-form input {
+    font-size: 1em;
+  }
+
+  .button-group button {
+    font-size: 1em;
+    padding: 10px 18px;
+  }
+}
+
+
+
 /* Responsive media queries */
 
 @media (min-width: 1440px) {
@@ -476,4 +710,63 @@ body {
     opacity: 1;
   }
 }
+
+/* detail page responsive */
+
+@media (width: 320px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 1rem 0.7rem;
+    margin: 20px 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  #formSummary {
+    font-size: 0.95rem;
+    padding: 15px;
+    max-width: 250px;
+  }
+
+  .car-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .car-card {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.2rem;
+  }
+}
+
 

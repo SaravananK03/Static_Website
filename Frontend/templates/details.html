@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Choose a Car</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../static/style.css" />
   <style>
     body {
       background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
@@ -43,8 +44,8 @@
     }
 
     #formSummary {
-      background: rgba(255, 255, 255, 0.2);
-      color: #fff;
+      background: rgba(255, 255, 255, 0.6);
+      color: #000000;
       padding: 20px;
       margin-bottom: 40px;
       border-radius: 10px;
@@ -78,6 +79,8 @@
         font-size: 1rem;
       }
     }
+
+    
   </style>
 </head>
 <body>
@@ -85,9 +88,9 @@
     <div class="logo">CarRental</div>
     <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="details.html">Details</a></li>
-      <li><a href="confirmation.html">Confirmation</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./details.html">Details</a></li>
+      <li><a href="./confirmation.html">Confirmation</a></li>
     </ul>
   </nav>
 
@@ -99,6 +102,6 @@
     <div id="carList" class="car-selection"></div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="../static/script.js"></script>
 </body>
 </html>
