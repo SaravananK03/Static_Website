@@ -4,6 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Car Rental Reservation</title>
+  <link rel="stylesheet" href="./static/style.css" />
+</head>
+<body>
+   <header>
+    <nav class="navbar">
+      <div class="logo">CarRental</div>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./templates/details.html">Details</a></li>
+        <li><a href="./templates/confirmation.html">Confirmation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="hero">
+    <div class="booking-box">
+      <div class="form-row">
+        <select>
+          <option>Same Drop-off Location</option>
+          <option>Different Drop-off Location</option>
+        </select>
+        <a href="#" class="link">Add a Discount Code</a>
+      </div>
+      <div class="form-row wide">
+        <input type="text" placeholder="Pick-up Location" id="pickupLocation" required />
+        <input type="date" id="pickupDate" required />
+        <input type="time" id="pickupTime" required />
+        <input type="date" id="dropoffDate" required />
+        <input type="time" id="dropoffTime" required />
+        <button class="view-btn" onclick="saveFormAndGo()">View Vehicles</button>
+      </div>
+      <div class="form-row info">
+        <span><strong>Driver Age: 25+</strong> <span class="info-icon">ℹ</span></span>
+        <a href="#" class="edit-link">View / Edit / Cancel</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./static/script.js"></script>
+  <!-- Google Maps Places API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWbrsBX7BA2A_0sb7pz0mb-UAx--hC4gc&libraries=places" defer></script>
+
+<!-- Your script (make sure it's in static folder now) -->
+<script src="./static/script.js" defer></script>
 </head>
 <body>
 
